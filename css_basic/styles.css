@@ -18,4 +18,23 @@ aside {
     flex: 1;
     overflow-y: auto;
 }
+aside p {
+    color: red;
+}
 
+h1, h2, h3 {
+    background-color: brown;
+}
+
+p {
+    color: darkred;
+}
+
+table {
+    color: darkgreen;
+}
+
+
+body {
+    background-image: url(DSC_4440 mod 2.jpg);
+}
