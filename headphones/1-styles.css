@@ -3,9 +3,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1000px;
+    /* align-items: center; */
 }
 
+/* || VARIABLES */
+
+
 /* || GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 a:hover, a:active {
     color: #FF6565;
