@@ -2,58 +2,59 @@
 <html lang="en-US">
 
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Registration Form</title>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Registration Form</title>  
     </head>
 
     <body>
-    <form action="/my-handling-form-page" method="post">
-        <ul>
-            <p>Required fields are followed by <span aria-label="required">*</span>.</p>
-            <li>
-                <label for="name">Name:<span aria-label="required">*</span></label>
-                <input type="text" id="name" name="user_name" required>
-            </li>
-            
-            <li>
-                <label for="mail">Email:<span aria-label="required">*</span></label>
-                <input type="email" id="mail" name="user_email" required>
-            </li>
-            
-            <li>
-                <label for="pwd">Password:<span aria-label="required">*</span></label>
-                <input type="password" id="pwd" name="user_password" required>
-            </li>
-            
-            <li>
-                <label for="conpwd">Confirm Password:<span aria-label="required">*</span></label>
-                <input type="password" id="conpwd" name="user_passwordConfirmed" required>
-            </li>
 
-            <li class="button">
-                <button type="submit">Submit</button>
-            </li>
-        </ul>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+                <li>
+                    <label for="name">Name:<span aria-label="required">*</span></label>
+                    <input type="text" id="name" name="user_name" required>
+                </li>
+                
+                <li>
+                    <label for="mail">Email:<span aria-label="required">*</span></label>
+                    <input type="email" id="mail" name="user_email" required>
+                </li>
+                
+                <li>
+                    <label for="pwd">Password:<span aria-label="required">*</span></label>
+                    <input type="password" id="pwd" name="user_password" required>
+                </li>
+                
+                <li>
+                    <label for="conpwd">Confirm Password:<span aria-label="required">*</span></label>
+                    <input type="password" id="conpwd" name="user_passwordConfirmed" required>
+                </li>
 
-    </form>
+                <li class="button">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
 
-    <script>
-        // Function to check if password and confirm password fields match
-        function validatePassword() {
-          const password = document.getElementById("pwd").value;
-          const confirmPassword = document.getElementById("conpwd").value;
-    
-          if (password != confirmPassword) {
-            document.getElementById("passwordError").innerHTML = "Passwords do not match!";
-          } else {
-            document.getElementById("passwordError").innerHTML = "";
-          }
-        }
-    
-        // Add event listener to confirm password field
-        document.getElementById("conpwd").addEventListener("input", validatePassword);
-    </script>
+        </form>
+
+        <script>
+            // Function to check if password and confirm password fields match
+            function validatePassword() {
+            const password = document.getElementById("pwd").value;
+            const confirmPassword = document.getElementById("conpwd").value;
+        
+            if (password != confirmPassword) {
+                document.getElementById("passwordError").innerHTML = "Passwords do not match!";
+            } else {
+                document.getElementById("passwordError").innerHTML = "";
+            }
+            }
+        
+            // Add event listener to confirm password field
+            document.getElementById("conpwd").addEventListener("input", validatePassword);
+        </script>
 
     </body>
 </html>
