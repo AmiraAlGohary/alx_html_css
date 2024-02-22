@@ -38,5 +38,22 @@
 
     </form>
 
+    <script>
+        // Function to check if password and confirm password fields match
+        function validatePassword() {
+          const password = document.getElementById("pwd").value;
+          const confirmPassword = document.getElementById("conpwd").value;
+    
+          if (password != confirmPassword) {
+            document.getElementById("passwordError").innerHTML = "Passwords do not match!";
+          } else {
+            document.getElementById("passwordError").innerHTML = "";
+          }
+        }
+    
+        // Add event listener to confirm password field
+        document.getElementById("conpwd").addEventListener("input", validatePassword);
+    </script>
+
     </body>
 </html>
