@@ -76,19 +76,16 @@
   </head>
   <body>
     <form action="/my-handling-form-page" method="post">
-        <!-- 
-        Apply appropriate HTML5 validation attributes to ensure the name and email fields are
-        required and that the email field accepts a valid email format.
-        -->
         <ul>
+            <p>Required fields are followed by <span aria-label="required">*</span>.</p>
             <li>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name">
+                <label for="name">Name:<span aria-label="required">*</span></label>
+                <input type="text" id="name" name="user_name" required>
             </li>
             
             <li>
-                <label for="mail">Email:</label>
-                <input type="email" id="mail" name="user_email">
+                <label for="mail">Email:<span aria-label="required">*</span></label>
+                <input type="email" id="mail" name="user_email" required>
             </li>
             
             <li>
