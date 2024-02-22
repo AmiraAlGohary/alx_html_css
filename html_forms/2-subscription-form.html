@@ -1,10 +1,3 @@
-<!-- Build an HTML form for a subscription with the following criteria:
-
-    Include fields for the user’s name, email, and subscription preference (monthly, yearly).
-    Utilize radio buttons for the subscription preference and ensure that the user can only select one option.
-    Apply HTML5 validation to ensure all fields are required and the email field accepts a valid email format. -->
-
-
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -28,15 +21,29 @@
                     <input type="email" id="mail" name="user_email" required>
                 </li>
                 
-                <li>
-                    <label for="pwd">Password:<span aria-label="required">*</span></label>
-                    <input type="password" id="pwd" name="user_password" required>
-                </li>
-                
-                <li>
-                    <label for="conpwd">Confirm Password:<span aria-label="required">*</span></label>
-                    <input type="password" id="conpwd" name="user_passwordConfirmed" required>
-                </li>
+                    
+                <fieldset>
+                    <legend>subscription preference<span aria-label="required">*</span></legend>
+                    <ul>
+                        
+                        <li>
+                            <label for="preference_1">
+                                <input type="radio" id="preference_1" name="preference" value="M" required />
+                                monthly
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <label for="preference_2">
+                                <input type="radio" id="preference_2" name="preference" value="Y" required />
+                                yearly
+                            </label>
+                        </li>
+
+                    </ul>
+                </fieldset>
+  
+
 
                 <li class="button">
                     <button type="submit">Submit</button>
