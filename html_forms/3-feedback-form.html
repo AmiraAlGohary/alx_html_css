@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Feedback Form with Checkboxes and File Upload</title>  
+    </head>
+
+    <body>
+        <form action="/my-handling-form-page" method="post" onsubmit="return validateForm()">
+            <ul>
+                <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+                <li>
+                    <label for="name">Name:<span aria-label="required">*</span></label>
+                    <input type="text" id="name" name="user_name" required>
+                </li>
+                
+                <li>
+                    <label for="mail">Email:<span aria-label="required">*</span></label>
+                    <input type="email" id="mail" name="user_email" required>
+                </li>
+                      
+                <fieldset>
+                    <legend>Choose one or more of the followig:</legend>
+
+                    <ul>
+
+                      <li>
+                        <label for="excellent">Excellent</label>
+                        <input type="checkbox" id="excellent" name="feedback" value="excellent" />
+                      </li>
+                      
+                      <li>
+                        <label for="good">Good</label>
+                        <input type="checkbox" id="good" name="feedback" value="good" />
+                      </li>
+
+                      <li>
+                        <label for="average">Average</label>
+                        <input type="checkbox" id="average" name="feedback" value="average" />
+                      </li>
+
+                      <li>
+                        <label for="poor">Poor</label>
+                        <input type="checkbox" id="poor" name="feedback" value="poor" />
+                      </li>
+
+                      <li>
+                        <input type="file" name="file" id="file" accept="image/*" multiple required />
+
+                      </li>
+
+                    </ul>
+
+
+                  </fieldset>
+
+            </ul>
+
+        </form>
+
+        <script>
+            function validateForm() {
+                // Get all checkboxes
+                const checkboxes = document.querySelectorAll('input[type="checkbox"][name="feedback"]');
+                const isChecked = false;
+    
+                // Check if at least one checkbox is checked
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        isChecked = true;
+                    }
+                });
+    
+                // Display error message if no checkbox is checked
+                if (!isChecked) {
+                    alert('Please select at least one feedback option.');
+                    return false;
+                }
+    
+                return true; // Form submission will proceed if at least one checkbox is checked
+            }
+        </script>
+
+    </body>
+</html>
